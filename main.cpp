@@ -9,12 +9,12 @@ public:
     Node *next;
 };
 
-class List
+class singleLinkedList
 {
     Node *START;
 
 public:
-    List()
+    singleLinkedList()
     {
         START = NULL;
     }
@@ -110,3 +110,8 @@ public:
         }
     }
 };
+
+int main()
+{
+    
+}
