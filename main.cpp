@@ -56,5 +56,22 @@ public:
         previous->next = nodeBaru;
     }
 
-    
+    bool listEmpty()
+    {
+        return (START == NULL);
+    }
+
+    bool Search(int nim, Node **Previous, Node **Current)
+    {
+        *Previous = START;
+        *Current = START;
+
+        while ((*Current != NULL) && (nim != (*Current)->noMhs))
+        {
+            *Previous = *Current;
+            *Current = (*Current)->next;
+        }
+
+        return (*Current != NULL);
+    }
 };
